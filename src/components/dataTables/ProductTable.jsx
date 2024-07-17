@@ -11,7 +11,7 @@ const ProductTable = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('https://pvpgamesdeploy.vercel.app/product');
+            const response = await fetch('https://pvpgamesdeploy.vercel.app/api/');
             if (!response.ok) {
                 throw new Error('Error al obtener los productos');
             }

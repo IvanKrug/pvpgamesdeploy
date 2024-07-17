@@ -8,7 +8,7 @@ import cors from 'cors';
 const app = express();
 
 const corsOptions = {
-    origin: 'https://pvpgamesdeploy.vercel.app/',
+    origin: 'https://pvpgamesdeploy.vercel.app/api/',
     credentials: true,
 };
 app.use(cors(corsOptions));

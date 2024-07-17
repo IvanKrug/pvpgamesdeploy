@@ -9,7 +9,7 @@ const AboutUs = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('https://pvpgamesdeploy.vercel.app/product');
+        const response = await axios.get('https://pvpgamesdeploy.vercel.app/api/product/');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);
