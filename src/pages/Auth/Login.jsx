@@ -12,7 +12,7 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://pvpgamesdeploy.vercel.app/login', { email, password });
+            const response = await axios.post('https://pvpgamesdeploy.vercel.app/api/login', { email, password });
 
             const userData = {
                 name: response.data.name,
