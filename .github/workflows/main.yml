@@ -23,4 +23,5 @@ jobs:
           - name: Start server
             run: |
               cd server
+              cd src
               node index.js
