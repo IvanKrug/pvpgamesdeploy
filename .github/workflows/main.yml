@@ -16,11 +16,11 @@ jobs:
           - run: echo "Comienzan a correr los comandos necesarios"
           - name: Install dependencies frontend
             run: npm install
-          - name: Go to backend
-            run: cd server
-          - name: Install dependencies backend
-            run: npm install
+          - name: Go to backend and install dependencies
+            run: |
+              cd server
+              npm install
           - name: Start server
-            run: npm run dev
-        
-      
+            run: |
+              cd server
+              node index.js
