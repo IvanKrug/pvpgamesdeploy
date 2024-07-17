@@ -24,7 +24,7 @@ const ProductForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3000/api/product', {
+      const response = await fetch('https://pvpgamesdeploy.vercel.app/product', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -11,7 +11,7 @@ const ProductTable = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:3000/api/product');
+            const response = await fetch('https://pvpgamesdeploy.vercel.app/product');
             if (!response.ok) {
                 throw new Error('Error al obtener los productos');
             }
@@ -24,7 +24,7 @@ const ProductTable = () => {
 
     const handleDeleteProduct = async (productId) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/product/${productId}`, {
+            const response = await fetch(`https://pvpgamesdeploy.vercel.app/product/${productId}`, {
                 method: 'DELETE',
             });
             if (!response.ok) {
