@@ -14,7 +14,13 @@ jobs:
           - name: Setup Node.js
             uses: actions/setup-node@v4
           - run: echo "Comienzan a correr los comandos necesarios"
-          - name: Install dependencies
+          - name: Install dependencies frontend
             run: npm install
+          - name: Go to backend
+            run: cd server
+          - name: Install dependencies backend
+            run: npm install
+          - name: Start server
+            run: npm run dev
         
       
