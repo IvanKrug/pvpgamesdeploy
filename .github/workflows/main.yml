@@ -16,10 +16,5 @@ jobs:
           - run: echo "Comienzan a correr los comandos necesarios"
           - name: Install dependencies
             run: npm install
-          - name: Deploy to Heroku
-            uses: akhileshns/heroku-deploy@v3.13.15 # This is the action
-            with:
-              heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-              heroku_app_name: "todo-list-project" #Must be unique in Heroku
-              heroku_email: "juespinozacorrea@gmail.com"
+        
       
