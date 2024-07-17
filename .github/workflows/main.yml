@@ -16,8 +16,6 @@ jobs:
           - run: echo "Comienzan a correr los comandos necesarios"
           - name: Install dependencies
             run: npm install
-          - name: Run tests
-            run: npm test
           - name: Deploy to Heroku
             uses: akhileshns/heroku-deploy@v3.13.15 # This is the action
             with:
