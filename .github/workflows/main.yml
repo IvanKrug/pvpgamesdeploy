@@ -8,7 +8,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
           - run: echo "Comienza el despliegue de mi aplicacion:"
-          - run: echo "El usuario ${{github.actor}} esta corriendo el CI/CD"
+          - run: echo "El usuario ${{ github.actor }} esta corriendo el CI/CD"
           - name: Checkout code
             uses: actions/checkout@v4
           - name: Setup Node.js
@@ -20,8 +20,11 @@ jobs:
             run: |
               cd server
               npm install
+          - name: Set environment variables
+            run: |
+              echo "MONGO_ATLAS_USERNAME=${{ secrets.MONGO_ATLAS_USERNAME }}" >> $GITHUB_ENV
+              echo "MONGO_ATLAS_PASSWORD=${{ secrets.MONGO_ATLAS_PASSWORD }}" >> $GITHUB_ENV
           - name: Start server
             run: |
               cd server
-              cd src
               node index.js
